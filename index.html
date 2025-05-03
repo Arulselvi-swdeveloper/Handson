@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Arutselvi M</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        
+                        <li><a href="./files/My Resume.pdf" class="btn1 active">Resume</a></li>
+                        
+
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="./files/mypic.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>Arutselvi</h1>
+                    <p> I'm Arutselvi from velachery.I recently completed my bachelor's degree in computer science from EGS Pillay arts and science college.
+                        I have a good knowledge in python,sql,html,css.I completed a python fullstack course in Besant technologies in chennai.
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="./files/My Resume.pdf" class="btn active">Download CV</a>
+                       <a href="https://wa.me/8667310139" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-Gmail"></i></a>
+                        <a href="http://www.linkedin.com/in/arutselvim18"><i class="fa-brands fa-linkedin"></i></a>
+
+                        <a href="https://github.com/Arulselvi-swdeveloper"><i class="fa-brands fa-github"></i></a>
+                        <a href="#"><i class="fa-brands fa-gmail"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
+
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
+
+        var typed=new Typed(".input",{
+            strings:["Frontend Developer","Web Developer"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
+</body>
+</html>
